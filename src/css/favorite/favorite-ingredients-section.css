@@ -1,0 +1,149 @@
+.favorite-ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.favorite-ingredient-item {
+  padding: 20px;
+
+  background-color: var(--primary-bg-color);
+  border-radius: 20px;
+  box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.05);
+}
+
+.ingredient-card {
+  box-shadow: 5px 5px 24px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 24px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 24px 0px rgba(0, 0, 0, 0.75);
+}
+
+.fav-ingredient-title {
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.is-alcoholic-drink-title {
+  margin-bottom: 14px;
+
+  font-size: 14px;
+  line-height: 1.28;
+  color: rgba(36, 36, 36, 0.5);
+}
+
+body.dark-theme .is-alcoholic-drink-title {
+  color: rgba(253, 253, 255, 0.5);
+}
+
+.fav-ingredient-description {
+  margin-bottom: 20px;
+  height: 54px;
+
+  font-size: 14px;
+  line-height: 1.28;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+body.dark-theme .fav-ingredient-description {
+  color: rgba(253, 253, 255, 0.8);
+}
+
+.learn-more-ingredient-btn {
+  width: 232px;
+  padding: 14px 0px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.33;
+  letter-spacing: 0.28px;
+  white-space: nowrap;
+  color: var(--primary-text-color);
+
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 12px;
+
+  transition: color var(--general-transition),
+    background-color var(--general-transition);
+}
+
+.learn-more-ingredient-btn:hover,
+.learn-more-ingredient-btn:focus {
+  background-color: var(--accent-color);
+}
+
+body.light-theme .learn-more-ingredient-btn:hover,
+body.light-theme .learn-more-ingredient-btn:focus {
+  color: var(--primary-bg-color);
+}
+
+.remove-ingredient-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+
+  background-color: var(--accent-color);
+  border-radius: 12px;
+  border: none;
+
+  transition: background-color var(--general-transition);
+}
+
+.remove-ingredient-btn:hover,
+.remove-ingredient-btn:focus {
+  background-color: var(--active-color);
+}
+
+.icon-trash {
+  stroke: var(--primary-svg-color);
+  fill: transparent;
+
+  transition: stroke var(--general-transition) fill var(--general-transition);
+}
+
+.ingredient-card-btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-ingredients-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 32px;
+  }
+
+  .favorite-ingredient-item {
+    flex-basis: calc((100% - 1 * 16px) / 2);
+  }
+
+  .icon-trash {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .favorite-ingredients-list {
+    column-gap: 24px;
+    row-gap: 44px;
+  }
+
+  .favorite-ingredient-item {
+    flex-basis: calc((100% - 2 * 24px) / 3);
+  }
+}
